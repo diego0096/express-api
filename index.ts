@@ -7,10 +7,13 @@ app.get('/', (req, res) => {
   
   res.status(401).json({
     ok: false,
-    msg: "No hay token en la petición"
+    msg: "No hay token en la petición, reemplazar el token"
   })
 })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+app.use('Hello there is a new token');
+app.on;
